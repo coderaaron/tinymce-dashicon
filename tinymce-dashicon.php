@@ -22,8 +22,8 @@ class tinymce_dashicon_plugin {
 	public function style_loader_tag( $tag, $handle ) {
 		if ( $handle == 'editor-buttons' ) {
 			remove_filter( 'style_loader_tag', array( $this, 'style_loader_tag' ), 50, 2 );
-			wp_register_style( 'mce-two-cols', plugin_dir_url( __FILE__ ) . 'css/tinymce-dashicon.css' );
-			wp_print_styles( 'mce-two-cols' );
+			wp_register_style( 'tinymce-dashicons-css', plugin_dir_url( __FILE__ ) . 'css/tinymce-dashicon.css' );
+			wp_print_styles( 'tinymce-dashicons-css' );
 		}
 
 		return $tag;
